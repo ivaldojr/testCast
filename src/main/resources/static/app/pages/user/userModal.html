@@ -1,0 +1,77 @@
+<div class="modal-content" ng-controller="UserModalCtrl">
+<form name="mainForm" ng-submit="createOrUpdateUser()" >
+  <div class="modal-header">
+    <button type="button" class="close" ng-click="$dismiss()" aria-label="Close">
+      <em class="ion-ios-close-empty sn-link-close"></em>
+    </button>
+    <h4 class="modal-title">Dados do Cliente</h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="inputName" ng-model="person.name" name="inputNome" placeholder="Name" required >
+          <span ng-class="error" ng-show="mainForm.inputNome.$error.required">*Campo obrigatório</span>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputStreet">Street</label>
+          <input type="number" class="form-control" id="inputStreet" name="inputStreet" ng-model="person.street" placeholder="Street" required>
+          <span ng-class="error" ng-show="mainForm.inputRendimento.$error.required">*Campo obrigatório</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputNumber">Number</label>
+          <input type="text" class="form-control" id="inputNumber" ng-model="person.number" placeholder="Number">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputNeighborhood">Neighborhood</label>
+          <input type="text" class="form-control" id="inputneighborhood" ng-model="person.neighborhood" >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" id="inputCity" ng-model="person.city" placeholder="City">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputState">State</label>
+          <input type="text" class="form-control" id="inputState" ng-model="person.state" >
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputCellphone">Cellphone</label>
+          <input type="text" class="form-control" id="inputCellphone" ng-model="person.cellphone" placeholder="Cellphone">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputPhone">Phone</label>
+          <input type="text" class="form-control" id="inputPhone" ng-model="person.phone" placeholder = "Phone" >
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-success btn-with-icon" >
+    <i class="ion-android-checkmark-circle"></i>
+    Confirmar
+    </button>
+  </div>
+  </form>
+</div>

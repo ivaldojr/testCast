@@ -1,0 +1,68 @@
+<div class="widgets">
+ <div class="col-lg-12 col-md-12">
+ <div class="row">
+  <div class="col-lg-6 col-md-12">
+    <button type="button" class="btn btn-success btn-with-icon" data-toggle="modal" 
+            ng-click="showModalToCreateUser()">
+      <i class="ion-android-checkmark-circle"></i>
+      Adicionar Pessoa
+  </button>
+  <input type="text" class="form-control" id="inputName" ng-change="getPersonById()" ng-model="personSearch.id" name="inputNome" placeholder="Pesquise por ID" required >
+  </div>
+   
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12">
+    <div class="panel with-scroll table-panel animated zoomIn" zoom-in="">
+      <div class="panel-heading clearfix">
+        <h3 class="panel-title">Lista de Pessoas</h3>
+      </div>
+      <div class="panel-body" >
+        <div class="vertical-scroll">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th class="table-id">#</th>
+                <th>Name</th>
+                <th>Street</th>
+                <th>Number</th>
+                <th>Neighborhood</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Cellphone</th>
+                <th>Phone</th>
+                <th>Opções</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- ngRepeat: item in smartTableData -->
+              <tr ng-repeat="item in listUsers">
+                <td class="table-id">{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.street}}</td>
+                <td>{{item.number}}</a></td>
+                <td>{{item.neighborhood}}</a></td>
+                <td>{{item.city}}</a></td>
+                <td>{{item.state}}</a></td>
+                <td>{{item.cellphone}}</a></td>
+                <td>{{item.phone}}</a></td>
+                <td>
+                 	<button type="button" class="status-button btn btn-xs btn-info" 
+	                     ng-click="showModalToEditUser(item)">
+	                   Editar
+	                 </button>
+	                 <button type="button" class="status-button btn btn-xs btn-danger" 
+	                         ng-click="deleteUser(item)">
+	                   Deletar
+	                 </button>
+                </td>
+              <!-- end ngRepeat: item in smartTableData -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+
+</div>
